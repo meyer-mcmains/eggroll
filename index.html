@@ -8,6 +8,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      /* Text */
+      p {
+        color: white;
+      }
+
+      /* Anchor */
+      a {
+        text-decoration: none;
+      }
+
+      a:visited {
+        /* if anyone has a better idea for a visited color please suggest */
+        color: aquamarine;
+      }
+
+      a:after {
+        content: "↗";
+      }
+
+      /* List */
+      ul {
+        list-style: none;
+        padding-inline: 24px;
+      }
+
+      ul li::before {
+        content: attr(data-icon);
+        font-size: 1.25em;
+      }
+    </style>
   </head>
 
   <body>
@@ -28,6 +59,21 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><b>Useful Links:</b></p>
+          <ul>
+            <li data-icon="📚">
+              <a
+                href="https://en.wikipedia.org/wiki/Egg_roll"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Egg roll
+              </a>
+            </li>
+          </ul>
         </td>
       </tr>
     </table>
