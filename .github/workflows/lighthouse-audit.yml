@@ -1,16 +1,13 @@
-name: Audit live site
+name: Lighthouse CI
 on: push
 
 jobs:
-  audit:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - name: Audit live URL
-        uses: jakejarvis/lighthouse-action@master
+      - uses: actions/checkout@v3
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
         with:
-          url: "https://www.eggroll.place"
-      - name: Upload results as an artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: report
-          path: "./report"
+          urls: |
+            https://www.eggroll.place
