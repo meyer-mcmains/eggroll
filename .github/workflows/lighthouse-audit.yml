@@ -11,3 +11,4 @@ jobs:
         with:
           urls: |
             https://www.eggroll.place
+          uploadArtifacts: true
